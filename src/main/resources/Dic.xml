@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pojo">
+    <insert id="addDic" parameterType="com.pojo.Dic">
+        insert into bp_dic (dic_id, dic_code, dic_name, description)
+        values (#{dicId}, #{dicCode}, #{dicName}, #{description})
+    </insert>
+    <select id="dicList" resultType="Dic">
+        select * from bp_dic
+    </select>
+</mapper>
